@@ -82,7 +82,7 @@ type Decoder struct {
 	unknownFields protoimpl.UnknownFields
 
 	// If set, rules are loaded from this path
-	RulesPath []string `protobuf:"bytes,1,rep,name=rules_path,json=rulesPath,proto3" json:"rules_path,omitempty"`
+	RulesPath string `protobuf:"bytes,1,rep,name=rules_path,json=rulesPath,proto3" json:"rules_path,omitempty"`
 	// If set, rules are loaded from this inline configuration.
 	// Note, if both rules_path and rules_inline are set, rules_path is first loaded and afterwards rules_inline is loaded
 	RulesInline []string `protobuf:"bytes,2,rep,name=rules_inline,json=rulesInline,proto3" json:"rules_inline,omitempty"`
