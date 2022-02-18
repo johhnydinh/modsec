@@ -124,7 +124,7 @@ func (*Decoder) Descriptor() ([]byte, []int) {
 	return file_envoy_config_filter_http_modsec_v2_modsec_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *Decoder) GetRulesPath() []string {
+func (x *Decoder) GetRulesPath() string {
 	if x != nil {
 		return x.RulesPath
 	}
