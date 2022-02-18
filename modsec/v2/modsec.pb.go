@@ -82,10 +82,10 @@ type Decoder struct {
 	unknownFields protoimpl.UnknownFields
 
 	// If set, rules are loaded from this path
-	RulesPath []string `protobuf:"bytes,1,rep,name=rules_path,json=rulesPath,proto3" json:"rules_path,omitempty"`
+	RulesPath string `protobuf:"bytes,1,rep,name=rules_path,json=rulesPath,proto3" json:"rules_path,omitempty"`
 	// If set, rules are loaded from this inline configuration.
 	// Note, if both rules_path and rules_inline are set, rules_path is first loaded and afterwards rules_inline is loaded
-	RulesInline []string `protobuf:"bytes,2,rep,name=rules_inline,json=rulesInline,proto3" json:"rules_inline,omitempty"`
+	RulesInline string `protobuf:"bytes,2,rep,name=rules_inline,json=rulesInline,proto3" json:"rules_inline,omitempty"`
 	// If set, it will takes rules from url set with a http header ModSec-key set to key
 	Remotes []*Remote `protobuf:"bytes,3,rep,name=remotes,proto3" json:"remotes,omitempty"`
 	// If set to true, if no errors occured during remote download, those rules will overwrite all rules.
@@ -124,18 +124,18 @@ func (*Decoder) Descriptor() ([]byte, []int) {
 	return file_envoy_config_filter_http_modsec_v2_modsec_proto_rawDescGZIP(), []int{1}
 }
 
-func (x *Decoder) GetRulesPath() []string {
+func (x *Decoder) GetRulesPath() string {
 	if x != nil {
 		return x.RulesPath
 	}
-	return nil
+	return ""
 }
 
-func (x *Decoder) GetRulesInline() []string {
+func (x *Decoder) GetRulesInline() string {
 	if x != nil {
 		return x.RulesInline
 	}
-	return nil
+	return ""
 }
 
 func (x *Decoder) GetRemotes() []*Remote {
