@@ -17,7 +17,7 @@ package wellknown
 
 // HTTP filter names
 const (
-  // Modsec HTTP filter
+  	// Modsec HTTP filter
 	Modsec = "envoy.filters.http.modsecurity"
 	// Buffer HTTP filter
 	Buffer = "envoy.filters.http.buffer"
